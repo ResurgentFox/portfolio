@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Particle } from './particles/particle'
+import { ParticledText } from './particles/ParticledText'
+import './App.css'
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <ParticledText text='<Ann Kulakova/>' particleSize={3} />
+      <div className='UnderTitle'>Developer</div>
+      <div className='PortfolioLinks'> My Works <br/>
+        <a className='Links' href='https://resurgentfox.github.io/cozy-space-client/'>Web-App for chatting </a> <br/>
+        <a className='Links' href='https://resurgentfox.github.io/react-todo/'>ToDo List</a>
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;
