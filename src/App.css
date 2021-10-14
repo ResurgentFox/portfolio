@@ -2,6 +2,9 @@
     margin-top: 3%;
     max-width: 100%;
 }
+.Content {
+    min-height: calc(100vh - 80px);
+}
 .UnderTitle {
     font-weight: bold;
     color: #fff;
@@ -38,8 +41,39 @@
 }
 @keyframes blinker {
     50% { opacity: 0.0; }
-  }
-
+}
+.TagCloud {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+}
+@media screen and (max-width: 600px) {
+    .TagCloud {
+        margin-left: 5px;
+        margin-right: 5px;
+        max-width: 100%;
+    }
+    .UnderTitle {
+        font-size: 24px;
+    }
+    .PortfolioLinks {
+        font-size: 20px;
+    }
+    .Links {
+        font-size: 18px;
+    }
+    .SkillsTitle {
+        font-size: 20px;
+    }
+    .Icon img{
+        width: 35px;
+        height: 35px;
+    }
+}
 .SocialMedia {
     display: flex;
     flex-direction: row;

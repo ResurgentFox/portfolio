@@ -9,6 +9,8 @@ interface Props {
   height?: number
   chaotic?: boolean
   particleSize?: number
+  smallScreenParticleFactor?: number
+  smallScreenParticlesCount?: number
 }
 
 export class ParticledText extends React.PureComponent<Props> {
@@ -31,8 +33,11 @@ export class ParticledText extends React.PureComponent<Props> {
   }
 
   private initScene = () => {
-    const count = 300
-    const size = this.props.particleSize || 1
+    const { smallScreenParticlesCount = 100, smallScreenParticleFactor = 2 } = this.props
+    const query = window.matchMedia('(max-width: 600px)')
+    const count = query.matches ? smallScreenParticlesCount : 300
+    const basicSize = this.props.particleSize || 1
+    const size = query.matches ? basicSize * smallScreenParticleFactor : basicSize
     const canvas = this.getCanvas()
     const ctx = this.getContext()
     if (!canvas || !ctx) {
