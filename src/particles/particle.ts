@@ -19,7 +19,6 @@ export class Particle {
   private accY = 0
   private friction = Math.random() * 0.05 + 0.94
   private color = 'white'
-
   private ctx: CanvasRenderingContext2D
 
   constructor(params: ParticleParams) {
