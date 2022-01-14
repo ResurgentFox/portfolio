@@ -34,6 +34,13 @@ export const App = () => {
           >
             ToDo List
           </a>
+          <br />
+          <a
+            className='Links'
+            href='https://resurgentfox.github.io/tic-tac-toe/'
+          >
+            Tic-Tac-Toe Game
+          </a>
         </div>
         <div className='Skills'>
           <div className='SkillsTitle'>Skills</div> <br />
